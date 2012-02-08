@@ -62,8 +62,8 @@ elif door == "3":
         print "1. Heads."
         print "2. Tails."
         
-        heads = {"One", "one", "1", "heads", "HEADS"}
-        tails = {"Two", "two", "2", "tails", "TAILS"}
+        heads = ["One", "one", "1", "heads", "HEADS"]
+        tails = ["Two", "two", "2", "tails", "TAILS"]
         coinflip1 = raw_input("> ")
         coinflip2 = random.randint(1,3)
         

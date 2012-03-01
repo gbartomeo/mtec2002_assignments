@@ -14,9 +14,13 @@ Cubes: [0, 1, 8, 27]
 """
 
 numbers = range(10)
-cubes = []
+
+"""cubes = []
 for number in numbers:
-	cubes.append(number**3)
-	
+	cubes.append(number**3)"""
+"""
+cubes = [number**3 for number in numbers]	"""
+def cube(x): return x*x*x
+cubes = map(cube,numbers)
 print "Numbers: %s" % numbers
 print "Cubes: %s" % cubes

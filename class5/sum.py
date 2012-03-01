@@ -16,10 +16,11 @@ Sum: 45
 """
 
 numbers = range(10)
-total = 0
+def sum(x,y): return x+y
 
-for number in numbers:
-	total += number
+"""for number in numbers:
+	total += number"""
 
+total = reduce(sum, numbers)
 print "Numbers: %s" % numbers
-print "Sum: %d" % total
+print "Sum: %s" % total

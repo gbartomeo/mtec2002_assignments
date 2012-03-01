@@ -21,3 +21,15 @@ fizzbuzz
 .
 .
 """
+
+integers = range(1,101)
+
+for integer in integers:
+	if (integer%3==0) and (integer%5==0):
+		print "fizzbuzz"
+	elif integer%3==0:
+		print "fizz"
+	elif integer%5==0:
+		print "buzz"
+	else:
+		print integer

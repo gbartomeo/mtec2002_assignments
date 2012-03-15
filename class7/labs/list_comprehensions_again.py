@@ -12,3 +12,26 @@ Example Output:
 ['author is Frank Herbert.', 'pages is 500.', 'title is Dune.']
 ['author is Mary Shelley.', 'pages is 278.', 'title is Frankenstein.']
 """
+
+book1 = {"title": "Dune", "author": "Frank Herbert", "pages": 500}
+book2 = {"title": "Frankenstein", "author": "Mary Shelley", "pages": 278}
+
+list1 = book1.items()
+list2 = book2.items()
+
+
+a = 0
+
+for k,v in list1:
+	list1[a] = "%s is %s" % (k, v)
+	a += 1
+
+a = 0
+
+for k,v in list2:
+	list2[a] = "%s is %s" % (k, v)
+	a += 1
+
+	
+print list1
+print list2

@@ -13,3 +13,11 @@ dog in spanish: perro
 cat in spanish: gato
 turtle in spanish: no se
 """
+
+def to_spanish(s):
+	eng_to_span = {"cat": "gato", "dog": "perro"}
+	print s
+	if s in eng_to_span:
+		return eng_to_span[s]
+	else:
+		return eng_to_span.get("turtle", "no se")

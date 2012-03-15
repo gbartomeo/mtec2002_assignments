@@ -54,3 +54,39 @@ tree =  """
     ||
 """
 
+truck = """
+      __
+ ____|  \_    
+|_________|
+  O     O
+"""
+
+heart = """
+  __  __
+ /  \/  \\
+  \    /
+    \/
+"""
+
+kirby = """
+(/)x_X)C=(>,<Q)
+"""
+
+while True:
+	user_input = raw_input("What picture should I draw?\n> ")
+	if user_input == "tree":
+		print tree
+	elif user_input == "truck":
+		print truck
+	elif user_input == "heart":
+		print heart
+	elif user_input == "kirby":
+		print kirby
+	elif user_input == "help":
+		print "\n====================================\nCommands: help, quit."
+		print "Pictures: tree, truck, heart, kirby.\n====================================\n"
+	elif user_input == "quit":
+		break
+	else:
+		print "I don't know how to draw that."
+exit()

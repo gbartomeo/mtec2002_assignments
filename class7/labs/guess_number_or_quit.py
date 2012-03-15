@@ -31,3 +31,18 @@ Guess the number I'm thinking of...
 > quit
 Bye!
 """
+
+from random import *
+
+secret_number = randint(1,20)
+print "A secret number has been chosen!"
+while True:
+	user_input = raw_input("Guess the secret number!\n> ")
+	if user_input.lower() == "quit":
+		print "Goodbye!"
+		break
+	elif int(user_input) == secret_number:
+		print "You got it!"
+	else:
+		print "Nope. Try again."
+exit()

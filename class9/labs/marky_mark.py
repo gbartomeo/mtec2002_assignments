@@ -20,3 +20,12 @@ Expected Output:
 <li>of strings!</li>
 </ul>
 """
+
+import markdown
+
+m = """
+* this is a list
+* of strings!
+"""
+
+print markdown.markdown(m)

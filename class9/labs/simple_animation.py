@@ -20,3 +20,46 @@ To write this code:
 	c. Use the docs if you need help with calling the function: http://www.pygame.org/docs/ref/draw.html#pygame.draw.circle
 4. Increment your y value by adding velocity_y.
 """
+
+import pygame
+
+FRAME_RATE = 20
+WINDOW_WIDTH = 300
+WINDOW_HEIGHT = 300
+WINDOW_TITLE = "My Game"
+
+background_color = (50, 255, 0)
+running = True
+
+x = WINDOW_WIDTH / 2
+y = 0
+velocity_y = 1
+
+pygame.init()
+
+screen = pygame.display.set_mode([WINDOW_WIDTH, WINDOW_HEIGHT])
+pygame.display.set_caption(WINDOW_TITLE)
+clock = pygame.time.Clock()
+
+while running == True:
+
+	# stop the main loop when window is closed 
+	for event in pygame.event.get():
+		if event.type == pygame.QUIT:
+			running = False
+			
+	screen.fill(background_color)
+
+	# draw everything here!  this line draws a circle in the middle of the screen
+	pygame.draw.circle(screen, (200, 0, 200), (x, y), 10)
+	y += velocity_y
+	if y == WINDOW_HEIGHT:
+		velocity_y = -velocity_y
+	if y == 0:
+		velocity_y = -velocity_y
+ 
+	clock.tick(FRAME_RATE)
+	pygame.display.flip()
+
+# exit when we're done with the loop
+pygame.quit()
